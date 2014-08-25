@@ -18,15 +18,15 @@ and from within virtualenv:
 
 (the following are optional and will require adding to the conf files of the project)
 
-* South for DB migrations:
+South for DB migrations:
 	
 	$ pip install south
 
-* psycopg2 for PostgreSQL (which I will be using - might require libpq-dev or postgresql-devel):
+psycopg2 for PostgreSQL (which I will be using - might require libpq-dev or postgresql-devel):
 
 	$ pip install psycopg2
 
-* django-compressor for merging JS/CSS assets:
+django-compressor for merging JS/CSS assets:
 
 	$ pip install django-compressor
 
