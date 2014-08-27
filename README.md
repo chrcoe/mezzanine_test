@@ -31,3 +31,17 @@ django-compressor for merging JS/CSS assets:
 	$ pip install django-compressor
 
 after successful installation, should have the same list of requirements as shown in requirements.txt
+
+create the project:
+
+	mezzanine-project test_project
+
+at this point, I needed to edit test_project/settings.py in order to add the proper DB connections...
+
+after this, we can create the tables, and then test it:
+
+	cd test_project
+	python manage.py createdb --noinput
+	python manage.py runserver
+
+uses the default admin UN/PW: admin/default
