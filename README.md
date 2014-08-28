@@ -45,3 +45,6 @@ after this, we can create the tables, and then test it:
 	python manage.py runserver
 
 uses the default admin UN/PW: admin/default
+
+The next step could be to change the FABRIC settings in settings.py to setup deployment settings
+
