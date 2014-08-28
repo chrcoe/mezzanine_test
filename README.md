@@ -9,22 +9,22 @@ will be using virtualenv to encase the project:
 
 using python 2.7 because the idea is to use Fabric for deployment eventually .. not in this repo most likely, but want to get used to everything without Python 3.
 
-	$ apt-get install libjpeg8 libjpeg8-dev
-	$ apt-get build-dep python-imaging
+	$ sudo apt-get install libjpeg8 libjpeg8-dev
+	$ sudo apt-get build-dep python-imaging
 
-and from within virtualenv:
+and from *within virtualenv*:
 
-	$ pip install mezzanine
+	$ sudo pip install mezzanine
 
 (the following are optional and will require adding to the conf files of the project)
 
 South for DB migrations:
 	
-	$ pip install south
+	$ sudo pip install south
 
 psycopg2 for PostgreSQL (which I will be using - might require libpq-dev or postgresql-devel):
 
-	$ pip install psycopg2
+	$ sudo pip install psycopg2
 
 django-compressor for merging JS/CSS assets:
 
@@ -34,9 +34,14 @@ after successful installation, should have the same list of requirements as show
 
 create the project:
 
-	mezzanine-project test_project
+	$ mezzanine-project test_project
 
 at this point, I needed to edit test_project/settings.py in order to add the proper DB connections...
+
+need to create the DB itself in the postgres admin prompt, I named the db: mezz_test_db
+
+    $ sudo -u postgres psql postgres
+    =# createdb mezz_test_db
 
 after this, we can create the tables, and then test it:
 
