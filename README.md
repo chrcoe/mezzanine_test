@@ -36,12 +36,19 @@ create the project:
 
 	$ mezzanine-project test_project
 
-at this point, I needed to edit test_project/settings.py in order to add the proper DB connections...
+at this point, I needed to edit test_project/local_settings.py in order to add the proper DB connections.  Use local_settings.py as it contains the local environment settings so you don't have to manually change the DB location or the Debug state when deploying.
 
 need to create the DB itself in the postgres admin prompt, I named the db: mezz_test_db
 
     $ sudo -u postgres psql postgres
     =# createdb mezz_test_db
+
+Then we need to create the database within the PostgreSQL server.
+
+	CREATE DATABASE mezz_test_db
+		WITH ENCODING='UTF8'
+		OWNER=mezz
+       		CONNECTION LIMIT=-1;
 
 after this, we can create the tables, and then test it:
 

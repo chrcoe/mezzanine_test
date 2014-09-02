@@ -94,7 +94,10 @@ MANAGERS = ADMINS
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+	'.sandbox-werks.com'
+	'.sandbox-werks.'
+]
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -103,7 +106,7 @@ ALLOWED_HOSTS = []
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = None
+TIME_ZONE = 'US/Eastern'
 
 # If you set this to True, Django will use timezone-aware datetimes.
 USE_TZ = True
@@ -161,6 +164,7 @@ FILE_UPLOAD_PERMISSIONS = 0o644
 #############
 # DATABASES #
 #############
+# local_settings.py overrides this
 
 DATABASES = {
     "default": {
@@ -173,9 +177,9 @@ DATABASES = {
         # Not used with sqlite3.
         "PASSWORD": "mezz",
         # Set to empty string for localhost. Not used with sqlite3.
-        "HOST": "",
+        "HOST": "localhost",
         # Set to empty string for default. Not used with sqlite3.
-        "PORT": "",
+        "PORT": "5432",
     }
 }
 
