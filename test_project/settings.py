@@ -165,6 +165,7 @@ FILE_UPLOAD_PERMISSIONS = 0o644
 # DATABASES #
 #############
 # local_settings.py overrides this
+# the DBs listed here would be the production DB (?)
 
 DATABASES = {
     "default": {
@@ -324,9 +325,10 @@ OPTIONAL_APPS = (
 #     "SSH_USER": "", # SSH username for host deploying to
 #     "HOSTS": ALLOWED_HOSTS[:1], # List of hosts to deploy to (eg, first host)
 #     "DOMAINS": ALLOWED_HOSTS, # Domains for public site
-#     "REPO_URL": "ssh://hg@bitbucket.org/user/project", # Project's repo URL
-#     "VIRTUALENV_HOME":  "", # Absolute remote path for virtualenvs
-#     "PROJECT_NAME": "", # Unique identifier for project
+#     "REPO_URL": "git@github.com:chrcoe/mezzanine_test.git", # Project's repo URL
+#     "VIRTUALENV_HOME":  "/home/sshuser/.venvs", # Absolute remote path for virtualenvs 
+#        #Do I need to make sure virtualenv is setup first?
+#     "PROJECT_NAME": "test_project", # Unique identifier for project
 #     "REQUIREMENTS_PATH": "requirements.txt", # Project's pip requirements
 #     "GUNICORN_PORT": 8000, # Port gunicorn will listen on
 #     "LOCALE": "en_US.UTF-8", # Should end with ".UTF-8"
