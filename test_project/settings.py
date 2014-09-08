@@ -327,7 +327,6 @@ OPTIONAL_APPS = (
 #     "DOMAINS": ALLOWED_HOSTS, # Domains for public site
 #     "REPO_URL": "git@github.com:chrcoe/mezzanine_test.git", # Project's repo URL
 #     "VIRTUALENV_HOME":  "/home/sshuser/.venvs", # Absolute remote path for virtualenvs 
-#        #Do I need to make sure virtualenv is setup first?
 #     "PROJECT_NAME": "test_project", # Unique identifier for project
 #     "REQUIREMENTS_PATH": "requirements.txt", # Project's pip requirements
 #     "GUNICORN_PORT": 8000, # Port gunicorn will listen on
